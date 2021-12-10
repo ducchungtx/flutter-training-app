@@ -13,12 +13,58 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: color.AppColor.homePageBackground,
-      appBar: AppBar(
-        title: Text('Home'),
-      ),
       body: Container(
+        padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
         child: Column(
-          children: <Widget>[Row()],
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Text(
+                  "Training",
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: color.AppColor.homePageTitle,
+                      fontWeight: FontWeight.w700),
+                ),
+                Expanded(child: Container()),
+                Icon(
+                  Icons.arrow_back_ios,
+                  size: 20,
+                  color: color.AppColor.homePageTitle,
+                ),
+                SizedBox(width: 10),
+                Icon(Icons.calendar_today_outlined,
+                    size: 20, color: color.AppColor.homePageTitle),
+                SizedBox(width: 10),
+                Icon(
+                  Icons.arrow_forward_ios,
+                  size: 20,
+                  color: color.AppColor.homePageTitle,
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: <Widget>[
+                Text(
+                  "Your program",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: color.AppColor.homePageSubtitle,
+                      fontWeight: FontWeight.w700),
+                ),
+                Expanded(child: Container()),
+                Text(
+                  "Details",
+                  style: TextStyle(
+                      fontSize: 20, color: color.AppColor.homePageDetail),
+                ),
+                SizedBox(width: 5),
+                Icon(Icons.arrow_forward,
+                    size: 20, color: color.AppColor.homePageIcons),
+              ],
+            )
+          ],
         ),
       ),
     );
